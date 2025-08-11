@@ -37,4 +37,8 @@ Le répertoire 22_loops montre comment utiliser des boucles avec le mot clé loo
 
 Le répertoire 24_match montre comment utiliser le pattern matching.
 
+Le répertoire 25_enums montre l'utlisation des énumérations.
+
+
+
 
