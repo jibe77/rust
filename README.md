@@ -5,6 +5,7 @@ Il permet également de manipuler des références sur les variables.
 Le mécanisme de frozing, c'est à dire que tant qu'une référence mutable (&mut T) existe, la valeur originale ne peut pas être utilisée directement. Cette règle s'appelle le borrow checking. Cela pourrait créer des "data races" (conditions de concurrence) et des incohérences, où y et x tenteraient d'accéder ou 
 de modifier la même donnée de manière non synchronisée.
 Ce langage contient des avancées modernes comme le pattern matching.
+Il offre la possibilité d'utiliser des closures, ce qui implique la possibilité de la programmation fonctionnelle avec des expresssions lambda.
 
 Le répertoire 06_first_rust indique la façon dont on utilise la fonction println! et comment lancer le programme via la commande $ rustc hello.rs && ./hello
 
@@ -39,6 +40,16 @@ Le répertoire 24_match montre comment utiliser le pattern matching.
 
 Le répertoire 25_enums montre l'utlisation des énumérations.
 
+Le répertoire 27_functions montre la création de fonctions.
 
+Le répertoire 28_associated_fn_and_meth explique la créations de fonctions dans le cadre de structures.
 
+Le répertoire 29_crates_and_cargo explique l'utilisation de cargo afin d'automatiser la gestion de projets, ainsi que des crates afin d'importer des librairies externes.
 
+Le répertoire 30_closures explique l'utilisation de closures, c'est une notation particulière qui permet de faire notamment de la programmation fonctionnelle.
+
+Le répertoire 31_modules explique le fonctionnement des modules, afin d'organiser son code.
+
+Le répertoire 33_cfg décrit l'annotation de compilation #[cfg(...)] afin de donner des indications de compilation, notamment pour donner des directives en fonction du système cible.
+
+Le répertoire 34_lambda_iterator montre l'utilisation de lambda afin de faire des itérations sur des vecteurs.
