@@ -72,3 +72,5 @@ On y étudie également l'utilisation de l'apostrophe pour indique au compilateu
 Le répertoire 38_traits décrit l'utilisation des traits, comme des interfaces en Java, contient des caractéristiques partagées que les types peuvent implémenter.
 
 Le répertoire 39_boxes décrit l'utilisation des boxes. Un "box" (Box<T>) est un pointeur intelligent qui vous permet de stocker des données sur le tas (heap) plutôt que sur la pile (stack). C'est utile lorsque vous manipulez de grandes structures pour éviter les copies coûteuses.
+On l'utilise également pour contenir des structures de données récursives.
+Enfin on voit que c'est utilisé également pour faire du polymorphisme.
