@@ -1,6 +1,8 @@
 Ce repo contient le code source utilisé lors de ma formation sur le langage Rust.
 
-La particularité de ce langage est qu'il utilise des variables immutables pour des raisons de Fearless Concurrency.
+On retrouve de nombreuses fonctionnalités présentes dans des langages comme Java.
+Cependant la particularité de ce langage.
+Il utilise des variables immutables pour des raisons de Fearless Concurrency.
 Il permet également de manipuler des références sur les variables.
 Le mécanisme de frozing, c'est à dire que tant qu'une référence mutable (&mut T) existe, la valeur originale ne peut pas être utilisée directement. Cette règle s'appelle le borrow checking. Cela pourrait créer des "data races" (conditions de concurrence) et des incohérences, où y et x tenteraient d'accéder ou 
 de modifier la même donnée de manière non synchronisée.
@@ -53,3 +55,20 @@ Le répertoire 31_modules explique le fonctionnement des modules, afin d'organis
 Le répertoire 33_cfg décrit l'annotation de compilation #[cfg(...)] afin de donner des indications de compilation, notamment pour donner des directives en fonction du système cible.
 
 Le répertoire 34_lambda_iterator montre l'utilisation de lambda afin de faire des itérations sur des vecteurs.
+
+Le répertoire 35_errors décrit de diverses façon la moyen de gérer les erreurs :
+  * main.rs montre le fonctionnement d'un crash d'une application, en libérant les ressources de la stack d'appels,
+  * option.rs montre l'utilisation de Some afin de wrapper un contenu, et ainsi gérer les cas où la valeur n'est pas spécifiée,
+  * result.rs montre l'utilisation de Result qui est une énumération générique qui a deux variantes :
+    Ok(T) : Indique que l'opération a réussi. La valeur T est le résultat attendu.
+    Err(E) : Indique que l'opération a échoué. La valeur E est l'erreur qui a eu lieu.
+
+Le répertoire 36_generics montre l'utilisation des generics sur les fonctions et les structs afin de s'adapter à différents types de paramètres.
+
+Le répertoire 37_ownership décrit le fonctionnement de l'ownership sur les variables, afin d'éviter le mécanisme de garbage collector.
+Il précise également le mode de fonctionnement de la stack et de la heap au niveau de la gestion de la mémoire.
+On y étudie également l'utilisation de l'apostrophe pour indique au compilateur le cycle de vie des variables.
+
+Le répertoire 38_traits décrit l'utilisation des traits, comme des interfaces en Java, contient des caractéristiques partagées que les types peuvent implémenter.
+
+Le répertoire 39_boxes décrit l'utilisation des boxes. Un "box" (Box<T>) est un pointeur intelligent qui vous permet de stocker des données sur le tas (heap) plutôt que sur la pile (stack). C'est utile lorsque vous manipulez de grandes structures pour éviter les copies coûteuses.
